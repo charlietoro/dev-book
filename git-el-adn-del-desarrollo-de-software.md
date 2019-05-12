@@ -50,9 +50,15 @@ Los estados están relacionados con tres estancias dentro de este flujo de git. 
 
 ![](.gitbook/assets/branches.jpg)
 
-Uno de los objetivos que busco la comunidad de Linux y **Linus** **Torvalds** con su sistema de control de versiones era poder trabajar paralelamente en sus proyectos, y crearon el termino **Branch** o **Rama** en español. Un **Branch** es una bifurcación que se le hace al proyecto donde se puede trabajar en cambios sin interrumpir el trabajo de otra persona, que pueden estar en otros branches. En Git tenemos un branch principal llamado **Master,** esta es la linea principal del proyecto y sobre ella se deprenden las los branches. Una vez se consiga la funcionalidad buscada por la cual se abrió el branche, este etaria listo para pasar al branch Master e integrar su funcionalidad, se realiza un proceso de fusión denominado **Merge**, así múltiples personas pueden trabajar en sus respectivos branches simultáneamente sin afectar las funcionalidades o progreso de los demás.
+Uno de los objetivos que busco la comunidad de Linux y **Linus** **Torvalds** con su sistema de control de versiones era poder trabajar paralelamente en sus proyectos, y crearon el termino **Branch** o **Rama** en español. Un **Branch** es una bifurcación que se le hace al proyecto donde se puede trabajar en nuevos cambios sin interrumpir el trabajo de otra persona. En Git tenemos un branch principal creado por defecto llamado **Master,** esta es la linea principal del proyecto y sobre ella se desprenden los branches. Una vez se consiga la funcionalidad buscada por la cual se abrió el branche, este etaria listo para pasar al branch Master e integrar su funcionalidad, se realiza un proceso de fusión denominado **Merge**, así múltiples personas pueden trabajar en sus respectivos branches simultáneamente sin afectar los cambios o progreso de los demás.
+
+![Representaci&#xF3;n gr&#xE1;fica de como trabajar con branches en Git](.gitbook/assets/using_branches_002.png)
+
+En la imagen se puede detallar como se trabaja paralelamente en diferentes branches, donde en cada una de ellas se agregan nuevas funcionalidades y en otras se corrigen bugs, al final se integra todo los cambios en la rama principal master. Cuando creamos un branch todos los commits que se realcen dentro de este tambien seran gestionados y administrados por git, llevando un historial de todos los cambios o versiones. La mayor ventaja de trabajar con branches es el tiempo que se puede llegar ahorrar mientras todo el equipo trabaja paralelamente en nuevas funcionalidades y/o corrección de bugs.
 
 ### Git una maquina de tiempo
+
+
 
 ### GitHub y GitLab
 
