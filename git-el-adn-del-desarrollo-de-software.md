@@ -40,6 +40,12 @@ Documentación oficial,  [una breve historia de Git](https://git-scm.com/book/es
 
 ### Los tres estados
 
+![Git workflow](.gitbook/assets/tres-estados.png)
+
+Las archivos y directorios que se van modificando dentro de nuestros proyectos van pasando por unos estados de preparación que se encargan de gestionar las versiones. La simplicidad de git cuenta con tres estados, **modified, committed y  staged**. Cuando se estan realizando cambios en un archivo o conjunto de ellos, en ese momento estos se encuentran en el estado **modified,** una vez se tenga los cambios necesarios listos, se pasa los archivos al estado de **staged,** en este punto los archivos estan listo para ser registrado localmente de manera persistente, y ese ya seria el ultimo estado, el estado **committed,** todos los archivos pasan a ser almacenados de manera segura en las bases de datos locales de git.
+
+Los estados estan relacionados con tres estancias dentro de este flujo de git. Inicialmente esta la estancia W**orking directory**, y como su nombre lo dice, es el directorio donde reposa nuestro proyecto, los directorio y bases de datos de git, solo los cambios que se hagan dentro de este directorio seran gestionados por git. **Stagin area**, esta ligada directamente al estado **staged,** es la estancia donde pasan todos nuestros archivos que ya estan listos para ser almacenados en las bases de datos de git. Por ultimo tenemos la estancia **Git repository**, estancia donde se encuentran el registro de las modificaciones realizadas, y el almacenamiento en las bases de datos de git para que estos cambio no se pierdan y sean gestionados por git.
+
 ### Ramas\(branches\)
 
 ### Git una maquina de tiempo
