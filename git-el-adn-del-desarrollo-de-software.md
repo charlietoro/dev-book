@@ -58,7 +58,21 @@ En la imagen se puede detallar como se trabaja paralelamente en diferentes branc
 
 ### Git una maquina de tiempo
 
+![Back to the Future III film](.gitbook/assets/clock_photos.png)
 
+Es normal que en situaciones estemos trabajando en una nueva funcionalidad dentro de un branch y las cosas no salgan bien, puede ocurrir que un commit anterior tenia una mejor version a la actual, en ese caso git permite que regresemos a commits anteriores y restablecer a una version estable. Podemos especificar el id del commit deseado:
+
+Podemos regresar y modificar el commit más reciente de una manera muy simple y practica, con el comando:
+
+```text
+$ git commit --ament 
+```
+
+Con este comando es pisible sustituir por completo el commit anterior, cambiar solo el mensaje del ultimo commit, pero en realidad la funcionalidad que buscamos es ir mas hacia atras en el tiempo. El comando.
+
+```text
+
+```
 
 ### GitHub y GitLab
 
