@@ -60,23 +60,33 @@ En la imagen se puede detallar como se trabaja paralelamente en diferentes branc
 
 ![Back to the Future III film](.gitbook/assets/clock_photos.png)
 
-Es normal que en situaciones estemos trabajando en una nueva funcionalidad dentro de un branch y las cosas no salgan bien, puede ocurrir que un commit anterior tenia una mejor version a la actual, en ese caso git permite que regresemos a commits anteriores y restablecer a una version estable. Podemos especificar el id del commit deseado:
+Es normal que en situaciones estemos trabajando en una nueva funcionalidad dentro de un branch y las cosas no salgan bien, puede ocurrir que un commit anterior tenia una versión más estable a la actual, en ese caso **Git** permite regresar a commits anteriores donde el proyecto era funcional o más estable. Existen varias formas de poder hacer estos retrocesos en el historial de un repositorio, algunas son simples de usar y muy útiles, otras requieren de mucho cuidado por el grado de accedo que podemos tener a todas el historial.
 
-Podemos regresar y modificar el commit más reciente de una manera muy simple y practica, con el comando:
+El comando _**git commit  --ament**_  es la forma más conveniente y fácil de poder regresar al commit inmediatamente anterior y añadir nuevos cambios o solo cambiar el mensaje del commit.
 
-```text
-$ git commit --ament 
-```
+Es posible ir más hacia atrás en el tiempo, hasta un momento especifico, como si del **Delorian** se tratara y se especifique la fecha y lugar a donde queremos viajar. El comando _**git checkout &lt;commit&gt;**_ permite regresar a un commit anterior especifico utilizando su hash identificador, este movimiento el historia de un repositorio es temporal, podemos realizar cambio, pruebas o simplemente dar un vistazo del proyecto en ese punto, sin embargo es posible regresar nuevamente donde se estaba. Existe la posibilidad de poder viajar a ese punto y abrir un nuevo branch\(como si fuera una nueva linea de tiempo\), con el comando _**git checkout -b  name-new-branch  &lt;hash commit&gt;**_ regresamos al commit especificado y creara el branche desde ese punto.
 
-Con este comando es pisible sustituir por completo el commit anterior, cambiar solo el mensaje del ultimo commit, pero en realidad la funcionalidad que buscamos es ir mas hacia atras en el tiempo. El comando.
-
-```text
-
-```
+Por ultimo tenemos una forma de regresar a un commit con la cual tenemos que tener mucho cuidado, el comando _**git  reset --hard &lt;hash-commit&gt;**_ permite ir hasta el commit deseado pero eliminara todo el historia posterior a ese commit, es por eso que este método es muy riesgoso.   
 
 ### GitHub y GitLab
 
+Con la llegada de Git como un novedoso sistema de control de versiones distribuido open-source, nace la necesidad de poder alojar en algún servidor estos repositorio de nuestros proyectos que están gestionados bajo Git, permitiendo que todo el equipo de trabajo pueda acceder a eses repositorios y poder compartir los cambio o versiones lanzadas. Entonces nacen unos servicios de hostin de repositorios basados en el motos de Git como lo son **GitHub** y **GitLab.**
+
+![](.gitbook/assets/github-logo.png)
+
+**GitHub** fue lanzado en 2008 por Tom Preston-Werner, Chris Wanstrath y PJ Hyatt. Fue el primer proveedor de hosting de Git en el mercado, ademas es una comunidad colaborativa de desarrolladores de software. Inicialmente con una cuenta gratuita se tenia un numero ilimitado de hostin públicos y si se deseaba tener un repositorio privado, era necesario pagar por ello. Ahora GitHub cuenta con numero de repositorios privados gratuitos. Actualmente es el servicio de hosting más popular y usado por los desarrolladores de software.
+
+![](.gitbook/assets/gitlab-logo.png)
+
+**GitLab,** al igual que GitHub, es un servicio de hosting de repositorios Git, con base en el motor de Git. Este fue lanzado para el 2011, que ofrece muchas funcionalidades adicionales a GitHub, como un canal de integración continua\(CI\) para sus proyectos. Por otra parte visualmente tiene un excelente diseño que es muy atractivo para los usuarios. GitLab desde sus inicios cuenta con un numero ilimitado de repositorios privados, pero a diferencia de GitHub su rendimiento no es tan bueno cuando consideramos las peticiones push y pull. 
+
+Realmente es muy difícil decidir cual de estos servicios utilizar, cuentan con características únicas que son muy importantes, sin importar cuestionarse cual es mejor de otro es aconsejable probar los dos servicios puesto que su uso es gratuito. 
+
 ### Conflictos
+
+Como se lo ha mencionado anteriormente, una de los principales beneficios de trabajar con Git como sistema de control de versiones descentralizado es el trabajo en equipo, pero todo no puede ser perfecto. En Git existe un termino conocido como **conflict**\(conflicto\) y se presenta en el momento que un alguien del equipo este trabajando dentro de su branch en un archivo en especifico y alguien más también este trabando en su branch en el mismo archivo, al momento de hace un **merge** a master de una de esas ramas no es problemático, pero cuando esa segunda persona intente hacer un merge a master, Git marca con un conflict diciendo que el mismo archivo también se ha modificado y existen dos versión en ese caso hay que solucionar manuelmente y seleccionar la versión correcta o tal vez dejar los cambios de ambos.
+
+Solucionar un conflicto es una tarea muy común, y es necesario tener una buena comunicación para poder solucionar estos problemas, aun así es muy importante saber cuales son los conflictos que se dan, existen algunas buenas practicas que ayudar a mitigar esta situación, que las miraremos más adelante. 
 
 ### Git Hooks
 
