@@ -90,9 +90,24 @@ Solucionar un conflicto es una tarea muy común, y es necesario tener una buena 
 
 ### Git Hooks
 
+Los Git Hooks son un tipo de **triggers** que permite la ejecución de scripts cuando una acción determinada ocurre dentro de nuestro repositorio. Git tiene un **lifecicle** que nos ayuda ver todo el flujo por el cual pasa los cambios en un repositorio, al pasar de una estado a otro.
+
+![Git Lifecicle: https://medium.com/@suthagar23/git-hooks-keep-the-code-quality-119e6feb511e](.gitbook/assets/git-hooks.jpeg)
+
+En la imagen se puede observar la linea del flujo normal por el que pasa un commit, desde nuestro equipo local hasta llegar a nuestro repositorio remoto ya sea en GitHub o GitLab. De esa linea cuelgan unos gancho que en ingles traduce **Hooks**, estos son los momentos donde es posible ejecutar scripts, que pueden estar escritos en cualquier lenguaje, para realizar acciones.
+
+Dentro de un repositorio Git existe una directorio _**.git**_ y dentro de este un directorio _**.git/hooks/**_ , en este directorio se encuentran los archivos que ejecutan los scripts, estos archivos están nombrados con el nombre del hook o momento en el que se ejecuta ese script y seguido un **.sample** \(pre-commit.sample, commit-msg.sample, post-commit.sample\). La extensión **.sample** es utilizada para ocultar ese script, o sea para que Git **no** lo ejecute cuando esa hook se este llevando acabo en el flujo del repositorio, en ese sentido para poder utilizar los hooks basta con quitar la extensión **.sample**, y colocar la lógica del script.
+
+Los Hooks de Git son muy utilizados para realizar test unitarios o de integridad antes de que los cambios lleguen al repositorio remoto, evitando así que todo este correcto. Otra funcionalidad muy útil es revisar la sintaxis del código que utilice una ciertas buenas practicas de sintaxis para que el código dentro del equipo de trabajo sea uniforme y mas legible. La verdad es que puedes hacer infinidad de cosas con los hooks, solo esta limitado por tu imaginación.    
+
+{% hint style="info" %}
+Referencias: [https://www.atlassian.com/git/tutorials/git-hooks](https://www.atlassian.com/git/tutorials/git-hooks)  
+[https://medium.com/@suthagar23/git-hooks-keep-the-code-quality-119e6feb511e](https://medium.com/@suthagar23/git-hooks-keep-the-code-quality-119e6feb511e)
+{% endhint %}
+
 ### Git en el ADN del desarrollador de software <a id="git-en-el-adn-del-desarrollador-de-software"></a>
 
-### Trabajo en equipo <a id="trabajo-en-equipo"></a>
-
 ### Buenas practicas <a id="buenas-practicas"></a>
+
+### Conclusiones
 
