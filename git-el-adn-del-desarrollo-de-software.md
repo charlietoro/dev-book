@@ -48,6 +48,8 @@ Los estados están relacionados con tres estancias dentro de este flujo de git. 
 
 ### Branches
 
+### Buenas practicas <a id="buenas-practicas"></a>
+
 ![](.gitbook/assets/branches.jpg)
 
 Uno de los objetivos que busco la comunidad de Linux y **Linus** **Torvalds** con su sistema de control de versiones era poder trabajar paralelamente en sus proyectos, y crearon el termino **Branch** o **Rama** en español. Un **Branch** es una bifurcación que se le hace al proyecto donde se puede trabajar en nuevos cambios sin interrumpir el trabajo de otra persona. En Git tenemos un branch principal creado por defecto llamado **Master,** esta es la linea principal del proyecto y sobre ella se desprenden los branches. Una vez se consiga la funcionalidad buscada por la cual se abrió el branche, este etaria listo para pasar al branch Master e integrar su funcionalidad, se realiza un proceso de fusión denominado **Merge**, así múltiples personas pueden trabajar en sus respectivos branches simultáneamente sin afectar los cambios o progreso de los demás.
@@ -98,16 +100,24 @@ En la imagen se puede observar la linea del flujo normal por el que pasa un comm
 
 Dentro de un repositorio Git existe una directorio _**.git**_ y dentro de este un directorio _**.git/hooks/**_ , en este directorio se encuentran los archivos que ejecutan los scripts, estos archivos están nombrados con el nombre del hook o momento en el que se ejecuta ese script y seguido un **.sample** \(pre-commit.sample, commit-msg.sample, post-commit.sample\). La extensión **.sample** es utilizada para ocultar ese script, o sea para que Git **no** lo ejecute cuando esa hook se este llevando acabo en el flujo del repositorio, en ese sentido para poder utilizar los hooks basta con quitar la extensión **.sample**, y colocar la lógica del script.
 
-Los Hooks de Git son muy utilizados para realizar test unitarios o de integridad antes de que los cambios lleguen al repositorio remoto, evitando así que todo este correcto. Otra funcionalidad muy útil es revisar la sintaxis del código que utilice una ciertas buenas practicas de sintaxis para que el código dentro del equipo de trabajo sea uniforme y mas legible. La verdad es que puedes hacer infinidad de cosas con los hooks, solo esta limitado por tu imaginación.    
+Los Hooks de Git son muy utilizados para realizar test unitarios, de integridad antes de que los cambios lleguen al repositorio remoto, evitando así que todo sea funcional. Otra funcionalidad muy útil es revisar la sintaxis del código, que se utilice una buenas practicas de sintaxis para que el código dentro del equipo de trabajo sea uniforme y más legible. La verdad es que puedes hacer infinidad de cosas con los hooks.    
 
 {% hint style="info" %}
 Referencias: [https://www.atlassian.com/git/tutorials/git-hooks](https://www.atlassian.com/git/tutorials/git-hooks)  
 [https://medium.com/@suthagar23/git-hooks-keep-the-code-quality-119e6feb511e](https://medium.com/@suthagar23/git-hooks-keep-the-code-quality-119e6feb511e)
 {% endhint %}
 
-### Git en el ADN del desarrollador de software <a id="git-en-el-adn-del-desarrollador-de-software"></a>
+### Buenas practicas.
 
-### Buenas practicas <a id="buenas-practicas"></a>
+Git resuelve muchos problemas y nos facilita mucho el trabajo en equipo, pero aun así es necesario tener bastante comunicación entre compañeros de trabajo. Algunas buenas practicas van surgiendo con el tiempo a medida que trabajas con git, aqui les dejo algunas que he utilizado y han echo que el trabajo en equipo sea más ordenado y fluido.
+
+* Delegar a una persona del equipo de trabajo para que sea el quien relice los cambios en la rama principal, quien autorice los **merge riquest**, que otras personas realice al tratar de unir los cambios a esta rama. Esto evita que cualquiera pueda enviar sus cosas desde sus branches hacia el branch master sin que se de una revisión final, puesto que es muy común que desde master salgan las versiones de nuestros proyectos a producción.
+* En el momento en el que ya tengamos la funcionalidad o resuelto un bug dentro de nuetro **branch**, y ya queremos enviar a master los cambios, primero se recomienda traes al branch actual todo los cambios que tenga master, esto con el objetivo de corregir los comflictos que se presenten antes que llegue a master.
+* Cuando creamos un branch es importante identificar rápidamente quien esta trabajando en ella, por eso algunos equipos de trabajo cuando le están dando el nombre al branch, anteponen dos iniciales de sus nombre\(Ana Gomez, ag-name-branch\).
+* Antes de enviar los cambios al estado **staging**, revisarlos para tener un primer filtro.
+* Utilizar merge request cuando ya queramos enviar nuestros cambios al branch principal.
+
+### Git en el ADN del desarrollador de software <a id="git-en-el-adn-del-desarrollador-de-software"></a>
 
 ### Conclusiones
 
