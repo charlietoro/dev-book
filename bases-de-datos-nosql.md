@@ -1,8 +1,8 @@
 ---
 description: >-
-  En este post vamos a ver que son las bases de datos NoSQL, porque son tan
-  populares actualmente, los tipos y en que se diferencian de las bases de datos
-  convencionales SQL.
+  En este post vamos a ver que son las bases de datos NoSQL, por qué son tan
+  populares actualmente, como almacena la información y en que se diferencian de
+  las bases de datos convencionales SQL.
 ---
 
 # Bases de Datos NoSQL
@@ -52,6 +52,4 @@ Las bases de datos basadas en Grafos nos permiten establecer conexiones entre nu
 ![](.gitbook/assets/janusgraph.png)
 
 Referencia: [https://pdfs.semanticscholar.org/f511/7084ca43e888fb3e17ab0f0e684cced0f8fd.pdf](https://pdfs.semanticscholar.org/f511/7084ca43e888fb3e17ab0f0e684cced0f8fd.pdf)
-
-### Pros y Contras
 
