@@ -119,5 +119,9 @@ Git resuelve muchos problemas y nos facilita mucho el trabajo en equipo, pero au
 
 ### Git en el ADN del desarrollador de software <a id="git-en-el-adn-del-desarrollador-de-software"></a>
 
+El ADN es el código genético de cada ser viviente y es lo que nos define como tal. No es concebible la existencia de un ser vivo sin el codigo ADN. Git se ha convertido en el ADN del desarrollador de software debido a la cantidad de personas que utilizan, tanto en empresas como en proyectos personales. Hoy en día es el mejor sistema de control de versiones que nos facilita el trabajo en equipo, y a llegado hasta tal punto que grandes empresas mundiales de tecnologia, como **google** y **facebook**, actualmente no contratan personal por titulos sino por la contribucion en proyectos servidos en GitHub o GitLab, se ha convertido como en nuestra hoja de vida. 
+
+El desarrollador de software 
+
 ### Conclusiones
 
