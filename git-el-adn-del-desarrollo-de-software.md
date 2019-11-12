@@ -48,8 +48,6 @@ Los estados están relacionados con tres estancias dentro de este flujo de git. 
 
 ### Branches
 
-### Buenas practicas <a id="buenas-practicas"></a>
-
 ![](.gitbook/assets/branches.jpg)
 
 Uno de los objetivos que busco la comunidad de Linux y **Linus** **Torvalds** con su sistema de control de versiones era poder trabajar paralelamente en sus proyectos, y crearon el termino **Branch** o **Rama** en español. Un **Branch** es una bifurcación que se le hace al proyecto donde se puede trabajar en nuevos cambios sin interrumpir el trabajo de otra persona. En Git tenemos un branch principal creado por defecto llamado **Master,** esta es la linea principal del proyecto y sobre ella se desprenden los branches. Una vez se consiga la funcionalidad buscada por la cual se abrió el branche, este etaria listo para pasar al branch Master e integrar su funcionalidad, se realiza un proceso de fusión denominado **Merge**, así múltiples personas pueden trabajar en sus respectivos branches simultáneamente sin afectar los cambios o progreso de los demás.
